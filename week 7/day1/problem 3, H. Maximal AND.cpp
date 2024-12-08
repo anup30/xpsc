@@ -25,8 +25,8 @@ int main() {
 		for (int k = b;k >= 0;k--){
 			if (bits[k] == n) ans += (1LL << k);         
 			else {
-            	int need = n - bits[k];
-            	if (K >= need) {
+				int need = n - bits[k];
+				if (K >= need) {
 					ans += (1LL << k);
 					K -= need;
 				}
