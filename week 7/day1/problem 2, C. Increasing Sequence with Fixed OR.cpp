@@ -6,25 +6,27 @@ using namespace std;
 int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
-
-	int tc;
+		
+	int tc=1;
 	cin >> tc;
-	while (tc--) {
-		long long n;
+	while (tc--){
+		ll n=23;
 		cin >> n;
-		deque<ll> ans;
-		for (int k = 0;k <= __lg(n);k++) {
-			if ((n >> k) & 1) {
-				long long value = n - (1LL << k);
-				if (value > 0) {
-					ans.push_front(value);
-				}
+		vector<ll> res;
+		res.push_back(n);		
+		int bits = 64;
+		int j=-1;
+		for(int k=0; k<bits; k++){
+			if((n>>k)&1){ // if this bit is on
+				ll p= (n ^ (1LL << k)); // toggle bit /// ---
+				if(p>0)	res.push_back(p);	
+				//if(p>n) k=bits;						
 			}
+		}	
+		cout <<	res.size() << endl;	
+		for(int i= res.size()-1; i>=0; i--){
+			cout << res[i] << " ";
 		}
-
-		ans.push_back(n);
-		cout << ans.size() << endl;
-		for (ll x : ans) cout << x << " ";		
 		cout << endl;
 	}
 }
