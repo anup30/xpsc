@@ -45,3 +45,8 @@ int main(){
 8
 6
 */
+
+/*
+if a^b = c
+then a^c=b
+*/
