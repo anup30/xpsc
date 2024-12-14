@@ -18,13 +18,9 @@ int main() {
 			ll bb = (aa & b)? aa: 0ll;
 			ll cc = (aa & c)? aa: 0ll;
 			ll dd = (aa & d)? aa: 0ll;
-			if((aa|bb)== dd+(aa &cc)){
-				a+=aa;
-			}
+			if((aa|bb)== dd+(aa &cc)) a+=aa;			
 		}
-		if((a|b)==(d+(a&c))){
-			cout << a << endl;
-		}
+		if((a|b)==(d+(a&c))) cout << a << endl;		
 		else cout << -1 << endl;
 	}
 }
