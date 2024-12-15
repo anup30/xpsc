@@ -16,13 +16,10 @@ int main() {
 		for(int i=1; i<=n; i++) cin >> v[i];
 		v[0]=v[1];
 		v[n+1] = v[n];
-		int idx=-1, mn=1e6, tmp;
+		int mn=1e6, tmp;
 		for(int i=1; i<=n; i++){
 			tmp = max(abs(v[i]-v[i-1]), abs(v[i]-v[i+1]));
-			if(tmp<mn){
-				idx=i;
-				mn=tmp;
-			}
+			if(tmp<mn) mn=tmp;			
 		}
 		cout << mn <<endl;
 	}
