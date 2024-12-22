@@ -13,7 +13,7 @@ ll gcd_array(vector<ll> &arr, int n){
 	ll result = arr[0];
 	for (int i = 1; i < n; i++){
 		result = gcd(arr[i], result);
-    	if(result == 1) return 1;
+		if(result == 1) return 1;
 	}
 	return result;
 }
