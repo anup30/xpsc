@@ -41,7 +41,7 @@ int main() {
 			else{
 				b=false;		
 			}
-			if(pq.size()>n+2) b=false;
+			if(pq.size()>n) b=false;
 		}
 		if(b) cout << "YES" << endl;
 		else cout << "NO" << endl;
