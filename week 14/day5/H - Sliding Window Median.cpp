@@ -1,5 +1,6 @@
 // sliding window median, Accepted
 #include <bits/stdc++.h>
+#define ll long long
 using namespace std;
  
 int main() {
@@ -14,7 +15,7 @@ int main() {
 	auto balance = [&]() {
 		while (lo.size() > hi.size() + 1) {
 			hi.insert(*lo.rbegin());
-			lo.erase(--lo.end()); // lo.erase(--lo.end());
+			lo.erase(--lo.end()); //
 		}
 		if (hi.size() > lo.size()) {
 			lo.insert(*hi.begin());
