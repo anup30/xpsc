@@ -1,4 +1,4 @@
-// L - Enemy is weak
+// L - Enemy is weak, Accepted
 #include <bits/stdc++.h>
 #define ll long long
 using namespace std;
